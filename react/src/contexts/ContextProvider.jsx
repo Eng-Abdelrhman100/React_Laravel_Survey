@@ -18,51 +18,15 @@ const StateContext = createContext({
 const tmpSurveys = [
   {
     "id": 1,
-    "image_url": "https:\/\/api.yoursurveys.xyz\/images\/vJutXzn02CDwdOyh.png",
-    "title": "TheCodeholic YouTube channel",
-    "slug": "thecodeholic-youtube-channel",
+    "image_url": null,
+    "title": "PHP Framework Survey",
+    "slug": "php-framework-survey",
     "status": true,
-    "description": "My name is Zura.<br>I am Web Developer with 9+ years of experience, free educational content creator, CTO, Lecturer and father of two wonderful daughters.<br><br>The purpose of the channel is to share my several years of experience with beginner developers.<br>Teach them what I know and make my experience as a lesson for others.",
-    "created_at": "2022-01-07 13:23:41",
-    "updated_at": "2022-01-18 16:34:19",
-    "expire_date": "2022-01-23",
+    "description": "Survey about PHP frameworks and Laravel preferences",
+    "created_at": "2022-01-07 08:50:40",
+    "updated_at": "2022-01-07 13:37:37",
+    "expire_date": "2022-02-01",
     "questions": [
-      {
-        "id": 15,
-        "type": "text",
-        "question": "From which country are you?",
-        "description": null
-      },
-      {
-        "id": 16,
-        "type": "checkbox",
-        "question": "Which language videos do you want to see on my channel?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque earum eos esse est ex facilis, iure laboriosam maiores neque nesciunt nulla placeat praesentium quae quos ratione, recusandae totam velit!",
-        "data": {
-          "options": [
-            {
-              "uuid": "8ee03188-9e7e-44e5-9176-7574c0beec6f",
-              "text": "JavaScript"
-            },
-            {
-              "uuid": "fe9497f2-8f05-4c82-9586-26e36736fa9e",
-              "text": "PHP"
-            },
-            {
-              "uuid": "db0f194c-d32d-4e19-929e-08f7b4e2bcc0",
-              "text": "HTML + CSS"
-            },
-            {
-              "uuid": "93273c4c-ac8f-432e-b847-e467df64ab9c",
-              "text": "All of the above"
-            },
-            {
-              "uuid": "d54818a7-ad7e-4b69-9287-16a8dc50a6cb",
-              "text": "Everything Zura thinks will be good"
-            }
-          ]
-        }
-      },
       {
         "id": 17,
         "type": "select",
@@ -200,10 +164,10 @@ export const ContextProvider = ({ children }) => {
   }
 
   const showToast = (message) => {
-    setToast({ message, show: true })
+    setToast({ message, show: true });
     setTimeout(() => {
-      setToast({message: '', show: false})
-    }, 5000)
+      setToast({ message: '', show: false });
+    }, 5000);
   }
 
   return (
@@ -214,6 +178,7 @@ export const ContextProvider = ({ children }) => {
         userToken,
         setUserToken,
         surveys,
+        setSurveys,
         questionTypes,
         toast,
         showToast
